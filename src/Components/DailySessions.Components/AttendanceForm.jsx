@@ -65,7 +65,7 @@ const handleSave = () => {
 };
   return (
     <>
-      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-10 overflow-hidden">
+      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center py-10 px-4 overflow-hidden">
         <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl w-full max-w-lg max-h-full flex flex-col overflow-y-auto">
           <h2 className="text-xl font-bold mb-4">
             {group.group_name} - Attendance
