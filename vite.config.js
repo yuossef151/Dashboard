@@ -8,5 +8,6 @@ plugins: [
     react(),
     tailwindcss(), 
   ],
+  base: '/Dashboard/',
   
 })
