@@ -72,16 +72,18 @@ export default function CreateGroupForm({ opn, setopn, groupToEdit }) {
   if (!opn) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-      <div className="border border-gray-100 bg-white p-6 rounded-2xl shadow-xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
-        <h2 className="text-xl font-bold mb-1">
-          {groupToEdit ? "Edit Training Group" : "Create New Training Group"}
-        </h2>
-        <p className="text-gray-500 text-sm mb-6">
-          {groupToEdit ? "Update the details below." : "Fill in the details below to create a new training group."}
-        </p>
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 md:p-10">
+      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] flex flex-col overflow-hidden">
+<div className="shrink-0  px-4 py-5">
+      <h2 className="text-xl font-bold mb-1">
+        {groupToEdit ? "Edit Training Group" : "Create New Training Group"}
+      </h2>
+      <p className="text-gray-500 text-sm">
+        {groupToEdit ? "Update the details below." : "Fill in the details below to create a new training group."}
+      </p>
+    </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="flex-1 overflow-y-auto lg:px-8 px-4 py-2 space-y-4">
           <div>
             <label className="block text-sm font-medium mb-1">Group Name *</label>
             <input required name="group_name" value={formData.group_name} onChange={handleChange} className="w-full p-2.5 bg-gray-50 border rounded-lg" />
@@ -142,7 +144,7 @@ export default function CreateGroupForm({ opn, setopn, groupToEdit }) {
             </div>
           </div>
 
-          <div className="flex justify-end gap-3 pt-4">
+          <div className="flex justify-between gap-3 py-4">
             <button type="button" onClick={() => setopn(false)} className="px-6 py-2 border rounded-lg hover:bg-gray-50">Cancel</button>
             <button type="submit" className="px-6 py-2 bg-black text-white rounded-lg hover:bg-gray-800">
               {groupToEdit ? "Save Changes" : "Create Group"}
