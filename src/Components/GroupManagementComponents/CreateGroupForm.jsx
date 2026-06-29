@@ -72,8 +72,8 @@ export default function CreateGroupForm({ opn, setopn, groupToEdit }) {
   if (!opn) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4 md:p-10">
-      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] flex flex-col overflow-hidden">
+    <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-20 md:p-10">
+      <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg lg:max-h-full md:max-h-full max-h-full flex flex-col overflow-hidden">
 <div className="shrink-0  px-4 py-5">
       <h2 className="text-xl font-bold mb-1">
         {groupToEdit ? "Edit Training Group" : "Create New Training Group"}
