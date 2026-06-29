@@ -65,8 +65,8 @@ const handleSave = () => {
 };
   return (
     <>
-      <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 overflow-y-auto">
-        <div className="bg-white p-6 md:p-8 rounded-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-xl">
+      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-10 overflow-hidden">
+        <div className="bg-white p-6 md:p-8 rounded-3xl shadow-xl w-full max-w-lg max-h-full flex flex-col overflow-y-auto">
           <h2 className="text-xl font-bold mb-4">
             {group.group_name} - Attendance
           </h2>
@@ -125,10 +125,10 @@ const handleSave = () => {
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
             placeholder="Enter session notes, key topics covered, student performance, etc."
-            className="w-full border p-3 rounded-lg h-24 mb-4 resize-none"
+            className="w-full border p-3 rounded-lg min-h-24 mb-4 resize-none"
           />
 
-          <div className="flex gap-3">
+          <div className="flex gap-3 shrink-0">
             <button
               onClick={onClose}
               className="flex-1 border py-2 rounded-lg font-medium"

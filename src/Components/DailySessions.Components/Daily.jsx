@@ -32,7 +32,7 @@ const tomorrow = new Date();
   };
   return (
     <>
-      <div className="p-10">
+      <div className="lg:p-10 p-6">
 <div className="flex gap-3 text-[20px] font-semibold mb-10">
     <CalendarDays className="w-8 h-8" />
     <p>Daily Session Tracker</p>
